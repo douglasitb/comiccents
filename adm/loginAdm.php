@@ -1,5 +1,5 @@
 <?php
-include_once 'conexao/conecta.php';
+include_once '../conexao/conecta.php';
 session_start();
 $dataSalva = ("Y-n-j H:i:s");
 $_SESSION["ultimoAcesso"] = $dataSalva;
@@ -28,9 +28,9 @@ if($linhas == 0)
 }
 else{
     while($usuario = mysql_fetch_array($resultado)){
-        if($usuario["tipo_usuario"] == "ADM"){
-            if($usuario == ['SENHA_USUARIO']){
-                echo "Senha Invalida !";
+        if($usuario["TIPO_USUARIO"] === "ADM"){
+            if($senhaUsuario !== $usuario["SENHA_USUARIO"]){
+                echo "Senha Invalida!";
                 echo"<a href=frmloginAdm.php>Voltar</a>;";
             }
             else{

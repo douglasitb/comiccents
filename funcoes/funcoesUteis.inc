@@ -14,4 +14,49 @@ if($tempo_transcorrido > $tempoExpiracao)
 }
 }
 
+function validaAutenticacao($paginaDirecionada,$endConexao){
+    
+    session_start();
+    
+    if(isset($_SESSION["usuario"]))
+        $nomeUsuario = $_SESSION["usuario"];
+        if(isset($_SESSION["senha"]))
+        $senhaUsuario = $_SESSION["senha"];
+        
+     if(!(empty($nomeUsuario)) or !(empty($senhaUsuario)))
+    
+     {
+         include_once "$endConexao";
+         $sql = "SELECT NOME_USUARIO, SENHA_USUARIO,TIPO_USUARIO
+             FROM usuario
+             WHERE  NOME_USUARIO= '$nomeUsuario'";
+         
+         $result =mysql_query($sql);
+         $linhas = mysql_num_rows($result);
+         
+         if($linhas == 0) {
+             
+             // echo "Você não efetuou login!";
+             header("Location:$paginaDirecionada");
+         } else { 
+             while($usuario = mysql_fetch_array($result))
+             {
+                 if($senhaUsuario !== $usuario["SENHA_USUARIO"])
+                 {
+                     
+                     // echo "Você não efetuou login";
+                     header("Location:$paginaDirecionada");
+                 }
+                 }
+              
+      }
+     }else{
+         // echo "Você não efetuou login !";
+          header("Location:$paginaDirecionada");
+         
+     }   
+     
+}
+
+
 ?>

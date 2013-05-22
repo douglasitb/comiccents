@@ -6,7 +6,7 @@
 
 <link rel="icon" href="imgens/4741_128x128.png" sizes="">
 
-<link rel="stylesheet" type="text/css" href="estilos.css" />
+<link rel="stylesheet" type="text/css" href="css/estilos.css" />
 
 <script language="JavaScript">
 	
@@ -44,7 +44,10 @@
 <body>
     
 <?php
-echo "<h1>Home - Page</h1>
+echo "<h1>RES- Page</h1>
+    <a href=frmlogin.html>Efetuar Login</a>";
+
+echo "<h1>ADM - Page</h1>
     <a href=adm/frmloginAdm.php>Efetuar Login</a>";
  
 ?>
