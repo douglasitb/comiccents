@@ -24,14 +24,14 @@ $linhas = mysql_num_rows($resultado);
 if($linhas == 0)
 {
   echo "Usuario não encontrado<br/>";
-  echo"<a href=frmlogin.php>Voltar</a>;";
+  echo"<a href=frmlogin.html>Voltar</a>;";
 }
 else{
     while($usuario = mysql_fetch_array($resultado)){
         if($usuario["TIPO_USUARIO"] === "RES"){
             if($senhaUsuario !== $usuario["SENHA_USUARIO"]){
                 echo "Senha Invalida!";
-                echo"<a href=frmlogin.php>Voltar</a>;";
+                echo"<a href=frmlogin.html>Voltar</a>;";
             }
             else{
                 $_SESSION["usuario"] = $nomeUsuario;
@@ -40,7 +40,7 @@ else{
             }
             }else{
                 echo "Tipo de usuario inválido !";
-                echo"<a href=frmlogin.php>Voltar</a>;";
+                echo"<a href=frmlogin.html>Voltar</a>;";
         }
     }
 }

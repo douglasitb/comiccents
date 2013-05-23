@@ -1,6 +1,6 @@
 <?php
 
-include_once'conexao/conecta.php';
+include_once'../conexao/conecta.php';
 $sql = "SELECT * FROM produtos";
 $result = mysql_query($sql);
 echo "<table border=1>";

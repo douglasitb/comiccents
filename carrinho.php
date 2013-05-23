@@ -9,32 +9,32 @@
       if(isset($_GET['acao'])){
 
             if($_GET['acao'] == 'add'){
-       
-            $cod = intval($_GET['COD_PRODUTO']);
-            if(!isset($_SESSION['carrinho'][$cod])){
-               $_SESSION['carrinho'][$cod] = 1;
+            $id = intval($_GET['COD_PRODUTO']);
+            if(!isset($_SESSION['carrinho'][$id])){
+               $_SESSION['carrinho'][$id] = 1;
             }else{
-               $_SESSION['carrinho'][$cod] += 1;
+               $_SESSION['carrinho'][$id] += 1;
             }
          }
-         
-            if($_GET['acao'] == 'del'){
-            $cod = intval($_GET['COD_PRODUTO']);
-            if(isset($_SESSION['carrinho'][$cod])){
-               unset($_SESSION['carrinho'][$cod]);
+
+
+         if($_GET['acao'] == 'del'){
+            $id = intval($_GET['COD_PRODUTO']);
+            if(isset($_SESSION['carrinho'][$id])){
+               unset($_SESSION['carrinho'][$id]);
             }
          }
 
 
          if($_GET['acao'] == 'up'){
-            if(is_array($_POST['NOME_PRODUTO'])){
-               foreach($_POST['NOME_PRODUTO'] as  $cod => $qtde_estoque){
-                  $cod  = intval($cod);
-                  $qtde_estoque = intval($qtde_estoque);
-                  if(!empty($qtde_estoque) || $qtde_estoque <> 0){
-                     $_SESSION['carrinho'][$cod] = $qtde_estoque;
+            if(is_array($_POST['prod'])){
+               foreach($_POST['prod'] as $id => $qtd){
+                  $id  = intval($id);
+                  $qtd = intval($qtd);
+                  if(!empty($qtd) || $qtd <> 0){
+                     $_SESSION['carrinho'][$id] = $qtd;
                   }else{
-                     unset($_SESSION['carrinho'][$cod]);
+                     unset($_SESSION['carrinho'][$id]);
                   }
                }
             }
@@ -44,7 +44,6 @@
 
 
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -75,30 +74,29 @@
     <tbody>
                <?php
                      if(count($_SESSION['carrinho']) == 0){
-                        echo '<tr><td colspan="5">N&uacute;mero de produtos no carrinho</td></tr>';
+                        echo '<tr><td colspan="5">N&atilde;o h&aacute; produtos no carrinho</td></tr>';
                      }else{
 
                         require("conexao/conecta.php");
 
                         $total = 0;
-                        
-                        foreach($_SESSION['carrinho'] as $cod => $qtde_estoque){
-                              $sql   = "SELECT *  FROM produtos WHERE 'COD_PRODUTO'= '$cod'";
+                        foreach($_SESSION['carrinho'] as $id => $qtd){
+                              $sql   = "SELECT *  FROM produtos WHERE COD_PRODUTO = '$id'";
                               $qr    = mysql_query($sql) or die(mysql_error());
                               $ln    = mysql_fetch_assoc($qr);
 
                               $nome  = $ln['NOME_PRODUTO'];
-                              $preco_produto = number_format($ln['PRECOVENDA_PRODUTO'], 2, ',', '.');
-                              $sub   = number_format($ln['PRECOVENDA_PRODUTO'] * $$qtde_estoque, 2, ',', '.');
+                              $preco = number_format($ln['PRECO_PRODUTO'], 2, ',', '.');
+                              $sub   = number_format($ln['PRECO_PRODUTO'] * $qtd, 2, ',', '.');
 
-                              $total += $ln['PRECOVENDA_PRODUTO'] * $qtde_estoque;
+                              $total += $ln['PRECO_PRODUTO'] * $qtd;
 
                            echo '<tr>
                                  <td>'.$nome.'</td>
-                                 <td><input type="text" size="3" name="prod['.$cod.']" value="'.$qtde_estoque.'" /></td>
-                                 <td>R$ '.$preco_produto.'</td>
+                                 <td><input type="text" size="3" name="prod['.$id.']" value="'.$qtd.'" /></td>
+                                 <td>R$ '.$preco.'</td>
                                  <td>R$ '.$sub.'</td>
-                                 <td><a href="?acao=del&id='.$cod.'">Remove</a></td>
+                                 <td><a href="?acao=del&COD_PRODUTO='.$id.'">Remove</a></td>
                               </tr>';
                         }
                            $total = number_format($total, 2, ',', '.');

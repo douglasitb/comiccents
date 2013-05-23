@@ -13,7 +13,7 @@ echo '<img src="imagens/'.$ln['IMAGEMURL_PRODUTO'].'" /> <br />';
 
 echo 'Pre&ccedil;o: R$'.$ln['PRECOVENDA_PRODUTO'].'<br />';
 
-echo '<a href="carrinho.php?acao=add&id='.$ln['COD_PRODUTO'].'">Comprar</a>';
+echo '<a href="carrinho.php?acao=add&COD_PRODUTO='.$ln['COD_PRODUTO'].'">Comprar</a>';
 }
 
 
