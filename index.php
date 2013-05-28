@@ -1,149 +1,132 @@
-
-<!DOCTYPE html>
 <html>
 <head>
-<title></title>   
+<title> Comic Cents </title>
 
-<link rel="icon" href="imgens/4741_128x128.png" sizes="">
-
-<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+<link rel="stylesheet" type="text/css" href="estilos.css" />
 
 <script language="JavaScript">
-	
-	function flogin() {
-	 
-	var controle=0;
-	var username= document.login.fname.value;
-	username=username.toLowerCase();
-	var password=document.login.fsenha.value;
-	password=password.toLowerCase();
-	
-	if (username=="joao" && password=="adm"){
-		window.location="restrito.html";controle=1;}	
-		
-	if (username=="maria" && password=="mod"){
-		window.location="restrito.html";controle=1;}
-		
-	if (username=="teste" && password=="site"){
-		window.location="restrito.html";controle=1;}
-		
-	if (controle==0)
-	
-	{alert("Senha ou usuário inválido.");
-	
-	}  
-	
-	
-	}
 
 </script>
 
 </head>
-
-
 <body>
-    
-<?php
-
-echo "<h1>RES- Page</h1>
-    <a href=frmlogin.html>Efetuar Login</a>";
-
-echo "<h1>ADM - Page</h1>
-    <a href=adm/frmloginAdm.php>Efetuar Login</a>";
- 
-?>
-    
-    
- <section id="principal">
- 
-     <img src="1188651134909.jpg"/>
-	  <section id="cabecalho">
-		  <header> 
-		  <img class="esquerda" src="imagens/logo_oficial.png" />
-                  
-		  
-		  
-		  <h1><center><p> 
-		  
-		 
-		  <a class="link_titulo" href="missao.html" target="quadro"> Home </a> &nbsp &nbsp &nbsp &nbsp 
-
-		 <a class="link_titulo" href="suporte.html" target="quadro">HQ's Marvel </a> &nbsp &nbsp  &nbsp &nbsp	
-
-		 <a class="link_titulo" href="filiais.html" target="quadro">HQ's DC Comic </a> &nbsp &nbsp  &nbsp &nbsp  
-
-		 <a class="link_titulo" href="contato.html" target="quadro"> HQ's Image Comic </a> &nbsp &nbsp  &nbsp &nbsp
-                 
-                 <a class="link_titulo" href="contato.html" target="quadro"> Mangás </a>
-   </p></center></h1> 
-		  </header>
-	  </section>
-	  
-	  <section id="menu_principal">
-		  
-	<form action="frmlogin.html" method="post">
-		<p><h1><center>Área Restrita</center></h1></p>
-				   
-		<h2>Usuário :</h2> <input type="text" name="fusuario" size="17" />
-				   
-		<h2>Senha :</h2> <input type="password" name="fsenha" size="17"/>
-				   					
-		<center><input type="button" value="Entrar" action="login.php"/></center> 
-	</form>  
-              
-              
-              <h1><span><center>Produto</center></span></h1>
-		  <h2><a href="telefones.html" target="quadro">Mobile</a><br />
-		  <a href="impressoras.html" target="quadro">Impressoras</a><br />
-		  <a href="som.html" target="quadro">Som</a><br />
-		  <a href="imagens.html" target="quadro">Imagem</a><br />
-		  <a href="games.html" target="quadro">Games</a><h2/>
-		  
-			  <p><h1><center>Novidades</center></h1></p>
-			  <h2><a href="trab_mobile.html" target="quadro">Mobile</a><br />
-			 <a href="trab_processadores.html" target="quadro"> Processadores</a><br />
-			  <a href="trab_interoperabilidade.html" target="quadro"> Interoperabilidade</a><br />                                                   
-			  <h2/><br />
-				  
-				   
-				  
-				  <a href = "www.fieb.edu.br"> Cadastre-se</a>
-				  
-				  
-	  </section>
-	  
-	  
-	  <section id="conteudo">
-	  
-	  <article>
-     	
-		<iframe src = "telefones.html" width="845px" height="710px" name="quadro" frameborder="5px">
-				
-		</iframe>
-				
-		
-	  </article>
-	  
-	  
-	  </section>
-	  
-	  <section id="principal"><br />
-
-    <audio id="audio" autoplay="autoplay" loop="loop">
-		<source src="Audio/01-abba-dancing_queen.mp3" type="audio/mp3"/>
-	</audio>
       
-
-</section>
-	  
-	  
-	  <section id="rodape">
-			  <footer>
-			   <p><center> Copyright 2001-2011. </center></p>
-				</footer>
-	  </section>
-
- </section>
+  <section id="principal">
+  
+    <section id="cabecalho">
+	 <header> 
+	 
+	 
+	<label for="" title="" id="busca"> Buscar: 
+	<input type="text" name="" id="" size="" maxlength="">
+	</label>  
+	<br />
+	 
+	  <nav>
+		<h1>
+		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Home  </a>  &nbsp &nbsp | &nbsp &nbsp
+		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Marvel  </a>  &nbsp &nbsp | &nbsp &nbsp 
+		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  DC  </a>  &nbsp &nbsp | &nbsp &nbsp 
+		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Image  </a>  &nbsp &nbsp | &nbsp &nbsp 
+		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Mang&aacute;s  </a>
+		</h1>
+	  </nav>
+	 </header>
+    </section> 	
+	
+	
+	
+    <section id="menu_esquerdo">
+	 <nav>
+	 
+	 <br />
+	 
+	 	   <form name="login">
 	   
+			Usu�rio: <input type="text" name="" autofocus="autofocus" required="required" size="15"/>
+			<br />
+			Senha: &nbsp <input type="password" name="" size="15" />
+			<br />
+		        <input type="button" value="Entrar" onClick=""/> &nbsp &nbsp &nbsp &nbsp
+		        <a href="cadastro.html" target="quadro"> Cadastre-se </a>
+				   
+			</form>
+			
+			
+	 
+	 
+  	   <h1> Destaques </h1>
+	   <ul class="nav">
+	   <li> <a href="listarCarrinho.php" target="quadro"> Homem-aranha   </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Batman 		   </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Super-man      </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Liga da Justia&ccedil;a </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Vingadores </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Homem de Ferro </a> </li> 
+	   <li> <a href="listarCarrinho.php" target="quadro"> Capit&atilde;o Am&eacute;rica </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Wolverine </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> X-men </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Hulk </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Flash </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Lanterna Verde </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Deadpool </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Motoqueiro Fantasma </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Quarteto Fant&aacute;stico </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Thor </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Ms. Marvel </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Dragon Ball </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> One Piece </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Death Note </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Naruto </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Bleach </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Spaw </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Turma da M&ocirc;nica </a> </li>
+	   </ul>
+
+  
+	 </nav>
+  	</section>	
+	
+	
+    <section id="Conteudo">
+	  <article>
+	  
+     	<iframe src="listarCarrinho.php" width="850px"  height="720px" name="quadro" frameborder="" >
+		
+		</iframe>	
+	  </article>
+	</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	<section id="Rodape">
+	  <footer>
+	    <center>
+		<a href="">Projeto</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		<a href="">Equipe</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		<a href="">Mapa do Site</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		<a href="">Fale conosco</a>
+		</center>
+		
+		<br />
+		
+	    <center>TCC - Projeto acad&ecirc;mico - INI3CM - 2013</center>
+	    <center>Rua Calopsita, 11 - Engenho Novo - Barueri - CEP:06460-112 - Hip&eacute;rion � todos os direitos reservados - 2013</center>
+		
+	  </footer>
+	</section>
+	
+	
+	
+		
+	
+	
+	 
+   </section>
 </body>
 </html>
