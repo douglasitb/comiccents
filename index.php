@@ -16,6 +16,7 @@
     <section id="cabecalho">
 	 <header> 
 	
+              <img src="" />
 	
 	<label for="" title="" id="busca"> Buscar: 
 	<input type="text" name="" id="" size="" maxlength="">
