@@ -1,3 +1,7 @@
+<php include_once '../funcoes/funcoesUteis.inc';    
+validaAutenticacao("../logout.php", "../conexao/conecta.php");
+?>
+
 
 <html>
     <head>
@@ -27,4 +31,4 @@
         
        
     </body>
-</html>
+    </html>

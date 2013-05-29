@@ -5,7 +5,6 @@
 		font-family:arial;
 		font-size:15px;
 		font-weight:bold;
-		float:flutuant;
 		background:url(imagens/topo_comiccents.jpg);
 		}
 	
@@ -37,9 +36,8 @@
 		font-size: 11px;
 		border-top: solid #000000 1px;
 		bottom:0px;
-	    }
-		
-		
+        }
+            
 	#busca{
 	float:Right;
 	background-color: orange;
@@ -49,9 +47,14 @@
 	padding-left: 10px;
 	color: #ffffff;
 	border-radius: 8px;
+        margin-top: 135px;
 	}
 
-        
+        #menu_topo{            
+           margin-top:156px;
+           padding-top: 4px;
+           padding-bottom: 4px;
+        }
 		
 	img{
 	    margin-left:10px;
@@ -75,7 +78,7 @@
 		font-size:20px;
 		color: #000000;
 		background-color:#ffffff;
-		padding:0;
+		padding:bottom;
 		}
 		
 	span{

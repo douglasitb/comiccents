@@ -15,15 +15,15 @@
   
     <section id="cabecalho">
 	 <header> 
-	 
-	 
+	
+	
 	<label for="" title="" id="busca"> Buscar: 
 	<input type="text" name="" id="" size="" maxlength="">
 	</label>  
 	<br />
 	 
 	  <nav>
-		<h1>
+		<h1 id="menu_topo">
 		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Home  </a>  &nbsp &nbsp | &nbsp &nbsp
 		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Marvel  </a>  &nbsp &nbsp | &nbsp &nbsp 
 		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  DC  </a>  &nbsp &nbsp | &nbsp &nbsp 
@@ -43,7 +43,7 @@
 	 
 	 	   <form name="login">
 	   
-			Usu�rio: <input type="text" name="" autofocus="autofocus" required="required" size="15"/>
+                       Usu&aacute;rio: <input type="text" name="" autofocus="autofocus" required="required" size="15"/>
 			<br />
 			Senha: &nbsp <input type="password" name="" size="15" />
 			<br />
@@ -57,8 +57,8 @@
 	 
   	   <h1> Destaques </h1>
 	   <ul class="nav">
-	   <li> <a href="listarCarrinho.php" target="quadro"> Homem-aranha   </a> </li>
-	   <li> <a href="listarCarrinho.php" target="quadro"> Batman 		   </a> </li>
+	   <li> <a href="adm/frmloginAdm.php" target="quadro"> Homem-aranha   </a> </li>
+	   <li> <a href="frmlogin.html" target="quadro"> Batman 		   </a> </li>
 	   <li> <a href="listarCarrinho.php" target="quadro"> Super-man      </a> </li>
 	   <li> <a href="listarCarrinho.php" target="quadro"> Liga da Justia&ccedil;a </a> </li>
 	   <li> <a href="listarCarrinho.php" target="quadro"> Vingadores </a> </li>

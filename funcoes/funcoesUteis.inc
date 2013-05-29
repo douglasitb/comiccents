@@ -14,7 +14,7 @@ if($tempo_transcorrido > $tempoExpiracao)
 }
 }
 
-function validaAutenticacao($paginaDirecionada,$endConexao){
+function validaAutenticacao($paginaDirecionada,$endConexao, $tipoUsuario){
     
     session_start();
     
@@ -31,32 +31,36 @@ function validaAutenticacao($paginaDirecionada,$endConexao){
              FROM usuario
              WHERE  NOME_USUARIO= '$nomeUsuario'";
          
-         $result =mysql_query($sql);
+         $result =mysql_query($sql) or mysql_error();
          $linhas = mysql_num_rows($result);
          
          if($linhas == 0) {
              
-             // echo "Você não efetuou login!";
-             header("Location:$paginaDirecionada");
+              //echo "Você não efetuou login!";
+            header("Location:$paginaDirecionada");
          } else { 
              while($usuario = mysql_fetch_array($result))
              {
                  if($senhaUsuario !== $usuario["SENHA_USUARIO"])
                  {
                      
-                     // echo "Você não efetuou login";
+                    // echo "Você não efetuou login";
                      header("Location:$paginaDirecionada");
+                 }
+                 if($tipoUsuario !== $usuario["TIPO_USUARIO"]){
+                     // echo "Você não tem acesso !";
+                     header("Location:$paginaDirecionada");
+                     
                  }
                  }
               
       }
      }else{
-         // echo "Você não efetuou login !";
-          header("Location:$paginaDirecionada");
+          echo "Você não efetuou login !";
+         // header("Location:$paginaDirecionada");
          
      }   
      
 }
-
 
 ?>

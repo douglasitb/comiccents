@@ -1,5 +1,7 @@
 <?php
 include_once '../conexao/conecta.php';
+include_once '../funcoes/funcoesUteis.inc';
+validaAutenticacao("../logout.php", "../conexao/conecta.php");
  
 $nome_produto = $_POST["nomeproduto"];
 $descricao_produto = $_POST["descricao"];
