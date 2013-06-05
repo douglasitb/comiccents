@@ -1,6 +1,6 @@
 <?php
 
-function expiracao($tempoExpiracao,$paginaRedirecionada="frmlogin.php")
+function expiracao($tempoExpiracao,$paginaRedirecionada="frmlogin.html")
 {
 $dataSalva = $_SESSION["ultimoAcesso"];
 $agora = date("Y-n-j H:i:s");
@@ -14,7 +14,7 @@ if($tempo_transcorrido > $tempoExpiracao)
 }
 }
 
-function validaAutenticacao($paginaDirecionada,$endConexao, $tipoUsuario){
+function validaAutenticacao($paginaRedirecionada,$endConexao, $tipoUsuario){
     
     session_start();
     
@@ -37,27 +37,27 @@ function validaAutenticacao($paginaDirecionada,$endConexao, $tipoUsuario){
          if($linhas == 0) {
              
               //echo "Você não efetuou login!";
-            header("Location:$paginaDirecionada");
+            header("Location:$paginaRedirecionada");
          } else { 
              while($usuario = mysql_fetch_array($result))
              {
                  if($senhaUsuario !== $usuario["SENHA_USUARIO"])
                  {
                      
-                    // echo "Você não efetuou login";
-                     header("Location:$paginaDirecionada");
+                    //echo "Você não efetuou login";
+                     header("Location:$paginaRedirecionada");
                  }
                  if($tipoUsuario !== $usuario["TIPO_USUARIO"]){
-                     // echo "Você não tem acesso !";
-                     header("Location:$paginaDirecionada");
+                     //echo "Você não tem acesso !";
+                     header("Location:$paginaRedirecionada");
                      
                  }
                  }
               
       }
      }else{
-          echo "Você não efetuou login !";
-         // header("Location:$paginaDirecionada");
+          echo "Você n&atilde; efetuou login !";
+          header("Location:$paginaRedirecionada");
          
      }   
      

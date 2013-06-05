@@ -16,7 +16,7 @@
     <section id="cabecalho">
 	 <header> 
 	
-              <img src="" />
+             <a href="index.php"> <img src="imagens/logo_comiccents.png" /> </a>
 	
 	<label for="" title="" id="busca"> Buscar: 
 	<input type="text" name="" id="" size="" maxlength="">
@@ -42,24 +42,25 @@
 	 
 	 <br />
 	 
-	 	   <form name="login">
+   <form action="login.php" name="login" method="post">
 	   
-                       Usu&aacute;rio: <input type="text" name="" autofocus="autofocus" required="required" size="15"/>
+                       Usu&aacute;rio: <input type="text" name="usuario" autofocus="autofocus" required="required" size="15"/>
 			<br />
-			Senha: &nbsp <input type="password" name="" size="15" />
+			Senha: &nbsp <input type="password" name="senha" size="15" />
 			<br />
-		        <input type="button" value="Entrar" onClick=""/> &nbsp &nbsp &nbsp &nbsp
+		        <input type="submit" value="Entrar"/> &nbsp &nbsp &nbsp &nbsp
 		        <a href="cadastro.html" target="quadro"> Cadastre-se </a>
 				   
 			</form>
+			
 			
 			
 	 
 	 
   	   <h1> Destaques </h1>
 	   <ul class="nav">
-	   <li> <a href="adm/frmloginAdm.php" target="quadro"> Homem-aranha   </a> </li>
-	   <li> <a href="frmlogin.html" target="quadro"> Batman 		   </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Homem-aranha   </a> </li>
+	   <li> <a href="listarCarrinho.php" target="quadro"> Batman 		   </a> </li>
 	   <li> <a href="listarCarrinho.php" target="quadro"> Super-man      </a> </li>
 	   <li> <a href="listarCarrinho.php" target="quadro"> Liga da Justia&ccedil;a </a> </li>
 	   <li> <a href="listarCarrinho.php" target="quadro"> Vingadores </a> </li>
@@ -92,7 +93,7 @@
     <section id="Conteudo">
 	  <article>
 	  
-     	<iframe src="listarCarrinho.php" width="850px"  height="720px" name="quadro" frameborder="" >
+     	<iframe src="listarCarrinho.php" name="quadro" frameborder="" id="iframe">
 		
 		</iframe>	
 	  </article>
@@ -108,8 +109,8 @@
 	<section id="Rodape">
 	  <footer>
 	    <center>
-		<a href="">Projeto</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-		<a href="">Equipe</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		<a href="">Projeto</a>      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		<a href="">Equipe</a>       &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 		<a href="">Mapa do Site</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 		<a href="">Fale conosco</a>
 		</center>
@@ -117,7 +118,7 @@
 		<br />
 		
 	    <center>TCC - Projeto acad&ecirc;mico - INI3CM - 2013</center>
-	    <center>Rua Calopsita, 11 - Engenho Novo - Barueri - CEP:06460-112 - Hip&eacute;rion � todos os direitos reservados - 2013</center>
+	    <center>Rua Calopsita, 11 - Engenho Novo - Barueri - CEP:06460-112 - Hip&eacute;rion todos os direitos reservados - 2013</center>
 		
 	  </footer>
 	</section>

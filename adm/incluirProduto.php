@@ -1,8 +1,8 @@
 <?php
 include_once '../conexao/conecta.php';
 include_once '../funcoes/funcoesUteis.inc';
-validaAutenticacao("../logout.php", "../conexao/conecta.php");
- 
+validaAutenticacao("../logout.php", "../conexao/conecta.php", "ADM");
+
 $nome_produto = $_POST["nomeproduto"];
 $descricao_produto = $_POST["descricao"];
 $preco_produto = $_POST["preco"];
@@ -14,7 +14,7 @@ $estado_fisico = $_POST ["estado_fisico"];
 $editora_produto = $_POST ["editora_produto"];
 $imagem_url = $_POST ["imagem_url"];
 
- 
+
 /*echo $nome_produto."<br/>";
 echo $descricao_produto."<br/>";
 echo $qtde_produto ."<br/>";

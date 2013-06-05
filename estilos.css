@@ -14,61 +14,67 @@
 		}
 
 	#menu_esquerdo{
- 	    float:left;
+                float:left;
 		color:#000000;
-		border-right: solid #000000 1px;
+		border-right:solid #000000 1px;
 		}
 		
 	#Conteudo{
 	    float:left;
-	    width: 750px;
-	    height: 700px;
-	    background-color: #FFFFFF;
+	    width:750px;
+	    height:700px;
+	    background-color:#FFFFFF;
     	}
 	
 	#Rodape{
 		padding-top: 20px;
 		padding-bottom: 20px;
-	    float:left;
-	    width: 100%;
-	    height: 50px;
-	    background-color: #ffffff;
+                float:left;
+                width: 100%;
+                height: 50px;
+                background-color: #ffffff;
 		font-size: 11px;
 		border-top: solid #000000 1px;
 		bottom:0px;
         }
+        
+        #iframe{
+           border: 0px;
+           height: 100%;
+           width:  100%;
+        }
             
 	#busca{
 	float:Right;
-	background-color: orange;
+	background-color:orange;
 	margin-left:5px;
-	padding: 3px;
+	padding-top:5px;
 	padding-right: 10px;
 	padding-left: 10px;
+        padding-bottom: 5px;
 	color: #ffffff;
 	border-radius: 8px;
-        margin-top: 135px;
+        margin-top: 130px;
 	}
 
         #menu_topo{            
-           margin-top:156px;
+           margin-top:-5px;
            padding-top: 4px;
-           padding-bottom: 4px;
+           padding-bottom: 3px;
         }
 		
-	img{
-	    margin-left:10px;
-	    margin-top:20px;
-	    }
+        img{
+            margin-top: -20px;
+        }
 
 		
-    h1{ 
+        h1{
 		background-color: orange;
-        font-size: 15px;
-        width:100%;
-        color:#ffffff;
-        font-family: arial;
-        text-align: center;
+                font-size: 15px;
+                width:100%;
+                color:#ffffff;
+                font-family: arial;
+                text-align: center;
 		padding-top:2px;
 		padding-bottom:2px;
 		margin-bottom:0;
@@ -78,7 +84,6 @@
 		font-size:20px;
 		color: #000000;
 		background-color:#ffffff;
-		padding:bottom;
 		}
 		
 	span{
@@ -137,7 +142,6 @@
 		
 		
 	ul.nav{
-	text-align:center;
 	width:100%;
 	margin:0;
 	padding:0;
@@ -152,6 +156,8 @@
 	display:block;
 	text-decoration:none;
 	padding: 2px;
+        padding-left: 10px;
+        text-align:left;
 	}		
 	
 	ul.nav li a:hover{

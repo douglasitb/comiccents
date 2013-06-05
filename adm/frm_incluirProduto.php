@@ -1,6 +1,6 @@
-<php include_once '../funcoes/funcoesUteis.inc';    
-validaAutenticacao("../logout.php", "../conexao/conecta.php");
-?>
+<? include_once '../conexao/conecta.php';
+include_once '../funcoes/funcoesUteis.inc';
+validaAutenticacao("../logout.php", "../conexao/conecta.php", "ADM");?>
 
 
 <html>

@@ -1,8 +1,10 @@
 <?php
 
 include_once'../conexao/conecta.php';
+
 //include_once '../funcoes/funcoesUteis.inc';
-//validaAutenticacao("../logout.php", "../conexao/conecta.php");
+//validaAutenticacao("../logout.php", "../conexao/conecta.php, ADM");
+echo "<meta charse=UTF-8>";
 $sql = "SELECT * FROM produtos";
 $result = mysql_query($sql);
 echo "<table border=1>";
@@ -36,7 +38,7 @@ while ($produtos = mysql_fetch_array($result))
     echo "<td>".utf8_decode($imagem_url)."</td>";
     echo "<td>".utf8_decode($fornecedor_produto)."</td>";      
     
-    echo "<td><a href =formAtualizarProduto.php?codproduto".$cod.">Atualizar</a></td>";
+    echo "<td><a href =frmatualizarProduto.php?codproduto".$cod.">Atualizar</a></td>";
     echo "<td><a href =excluirProduto.php?codproduto".$cod.">Excluir</a></td>";
     echo "</tr>";
     

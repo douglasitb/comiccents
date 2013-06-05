@@ -1,8 +1,8 @@
 <?php
 include_once 'conexao/conecta.php';
 session_start();
-$dataSalva = ("Y-n-j H:i:s");
-$_SESSION["ultimoAcesso"] = $dataSalva;
+//$dataSalva = ("Y-n-j H:i:s");
+//$_SESSION["ultimoAcesso"] = $dataSalva;
 
 /*$_SESSION["usuario"] = $_POST["usuario"];
 $_SESSION["senha"] = $_POST["senha"];
@@ -24,7 +24,7 @@ $linhas = mysql_num_rows($resultado);
 if($linhas == 0)
 {
   echo "Usuario não encontrado<br/>";
-  echo"<a href=frmlogin.html>Voltar</a>;";
+  echo"<a href=index.php>Voltar</a>;";
 }
 else{
     while($usuario = mysql_fetch_array($resultado)){
@@ -40,7 +40,7 @@ else{
             }
             }else{
                 echo "Tipo de usuario inválido !";
-                echo"<a href=frmlogin.html>Voltar</a>;";
+                echo"<a href=index.php>Voltar</a>;";
         }
     }
 }
