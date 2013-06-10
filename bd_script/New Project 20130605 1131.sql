@@ -129,10 +129,10 @@ CREATE TABLE `produtos` (
 INSERT INTO `produtos` (`COD_PRODUTO`,`NOME_PRODUTO`,`DESCRICAO_PRODUTO`,`PRECO_PRODUTO`,`PRECOVENDA_PRODUTO`,`QUANTIDADEESTOQUE_PRODUTO`,`IMAGEMURL_PRODUTO`,`TAMANHO_PRODUTO`,`FORNECEDORES_COD_FORNECEDOR`,`ESTADO_FISICO`,`EDITORA_PRODUTO`,`NUMERO_PAGS`) VALUES 
  (1,'Homem Aranha','E bom',145,149,'12','xxxxxx','225x225',1,'Novo','Marvel Comics',12),
  (2,'Homem Aranha','E bom',145,149,'12','xxxxxx','225x225',1,'Novo','Marvel Comics',12),
- (3,'Hoemem','dsbfhgfgf',10,10,'10','fdsasasdsada','102x102',1,'novo','Marveu',120),
- (4,'suimome','gsrfsf',101,10,'10','dsfsdfs','102x102',1,'novo','Marveu',120),
+ (3,'Hoemem','dsbfhgfgf',10,10,'10','unnamed1.jpg','102x102',1,'novo','Marveu',120),
+ (4,'suimome','gsrfsf',101,10,'10','unnamed3.jpg','102x102',1,'novo','Marveu',120),
  (5,'Homi de Ferradura','È bom podi compa',12,12,'14','unnamed.jpg','123x123',1,'Novinha','Marvéu',12),
- (6,'hfggghdhd','fhhfhfh',12,12,'14','Comics-Spiderman-4590.jpg','123x123',1,'Novinha','Marvéu',12);
+ (6,'hfggghdhd','fhhfhfh',12,12,'14','unnamed2.jpg','123x123',1,'Novinha','Marvéu',12);
 /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 
 

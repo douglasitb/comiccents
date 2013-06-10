@@ -16,14 +16,14 @@
 	#menu_esquerdo{
                 float:left;
 		color:#000000;
-		border-right:solid #000000 1px;
 		}
 		
 	#Conteudo{
-	    float:left;
-	    width:750px;
-	    height:700px;
-	    background-color:#FFFFFF;
+	    float:right;
+	    width:820px;
+	    height:730px;
+	    background-color:#ffffff;
+            
     	}
 	
 	#Rodape{
@@ -38,12 +38,19 @@
 		bottom:0px;
         }
         
-        #iframe{
+        #frame{
            border: 0px;
            height: 100%;
            width:  100%;
         }
             
+        #cadastro{
+        color: royalblue; 
+	text-decoration: underline;
+	font-family: Arial;
+        font-size: 12px;
+        }
+        
 	#busca{
 	float:Right;
 	background-color:orange;
@@ -161,7 +168,7 @@
 	}		
 	
 	ul.nav li a:hover{
-	background-color: #FFD700;
+	background-color: yellow;
 	color: #000000;
 	}
 		

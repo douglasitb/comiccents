@@ -6,7 +6,7 @@ $codigoProduto = $_GET["codigoproduto"];
 if(mysql($sql))
 {
     echo "Produto excluido com Sucesso!<br/>";
-    echo "<a href=listarprodutos.php>Listar Produtos </a>
+    echo "<a href=listarprodutos.php>Listar Produtos </a>";
 }
 
 ?>

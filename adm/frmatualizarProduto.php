@@ -4,7 +4,7 @@ $codigoProduto = $_REQUEST["codigo"];
 include_once '../conexao/conecta.php';
 include_once '../funcoes/funcoesUteis.inc';
 
-echo "<!DCOKTYPE html>";
+echo "<!DOCKTYPE html>";
 
 echo
 "
