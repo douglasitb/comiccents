@@ -1,14 +1,33 @@
 <html>
 <head> <title> Cadastro </title> </head>
-
-
 <body>
 
-<style type="text/css">
- #formulario{
-margin-left:100px;
+<script type="text/javascript">
+/* Máscaras ER */
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
 }
-</style>
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/\D/g,"");                  //Remove tudo o que não é dígito
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('telefone').onkeypress = function(){
+		mascara( this, mtel );
+	}
+}
+
+</script>
 
 <p><h3>Cadastro</h3></p>
 
@@ -24,8 +43,7 @@ E-mail........</label>
 <input type="text" name="" id="" size="" maxlength="">
 <br /><br /><br />
 
-
-Telefone..... <input type="tel" name="telefone" maxlenght="10" placeholder="(XX) XXXX-XXXX" />
+Telefone..... <input type="text" name="telefone" id="telefone" maxlength="14" placeholder="(XX) XXXX-XXXX" />
  <br /><br /><br />
 
 <label for="" title="Informe o sexo"> Sexo..........</label>
@@ -36,7 +54,7 @@ Telefone..... <input type="tel" name="telefone" maxlenght="10" placeholder="(XX)
 
 <label for="" title="Informe o CPF"> 
 CPF...........</label>
-<input type="text" name="" id="" size="" maxlength="50" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" />
+<input type="text" name="" id="cpf" size="" maxlength=""/>
 <br /><br /><br />
 
 <label for="" title="Selecione um estado"> Estado........</label>
@@ -98,6 +116,11 @@ N&uacute;mero..... </label>
 <input type="text" name="" id="" size="5" maxlength="">
 <br /><br /><br />
 
+&nbsp 
+
+Complemento.... </label>
+<input type="text" name="" id="" size="5" maxlength="">
+<br /><br /><br />
 
 <label for="" title="Informe a senha">
 Senha.......... </label>
@@ -111,10 +134,10 @@ Confirmar Senha..... </label>
 
 &nbsp &nbsp &nbsp &nbsp
 <input type="submit" name="botao1" value="Confirmar" /> &nbsp &nbsp &nbsp &nbsp
-<input type="reset" name="botao2" value="Limpar" />
+<input type="reset"  name="botao2" value="Limpar" />
 
 <br /><br /><br />
 
-
+</form>
 </body>
 </html>

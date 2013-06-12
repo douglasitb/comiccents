@@ -4,9 +4,6 @@
 
 <link rel="stylesheet" type="text/css" href="estilos.css" />
 
-<script language="JavaScript">
-
-</script>
 
 </head>
 <body>
@@ -17,10 +14,11 @@
 	 <header> 
 	
              <a href="index.php"> <img src="imagens/logo_comiccents.png" /> </a>
-	
-                <label for="" title="" id="busca"> 
-                <input type="text" name="" id="" size="" maxlength="" placeholder="Buscar">
-                
+             
+                <label for="" title="" id="busca">
+                Buscar:
+                <input type="text" name="" id="" size="" maxlength="" placeholder="Busque aqui">
+ 
                 </label>  
                 <br />
 	 
