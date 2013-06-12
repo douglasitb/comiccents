@@ -4,7 +4,6 @@
 
 <link rel="stylesheet" type="text/css" href="estilos.css" />
 
-
 </head>
 <body>
       
@@ -36,6 +35,7 @@
 	
 	
 	
+    
     <section id="menu_esquerdo">
 	 <nav>
 	 

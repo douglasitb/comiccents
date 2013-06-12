@@ -1,28 +1,37 @@
-	#principal{
+        body{
+           /*background:url(imagens/deadpool.jpg) no-repeat center center fixed;
+           background-size: cover; */
+           background-color: red;
+        }
+
+        #principal{
                 margin:0 auto;
-		height:200px;
                 width: 1050px;
+                height: 100%;
 		font-family:arial;
 		font-size:15px;
 		font-weight:bold;
-		background:url(imagens/topo_comiccents.jpg);
+		
 		}
 	
 	#cabecalho{
-	    width: 100%;
+            margin: 0 auto;
+	    width: 1050px;
 	    height: 200px;
+            background:url(imagens/topo_comiccents.jpg);
 		}
 
 	#menu_esquerdo{
                 float:left;
 		color:#000000;
+                background-color:#ffffff;
+                width:20%;
 		}
 		
 	#Conteudo{
 	    float:right;
-	    width:820px;
-	    height:740px;
-	    background-color:#ffffff;
+	    width:80%;
+            background-color:#ffffff;
             
     	}
 	

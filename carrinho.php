@@ -1,115 +1,97 @@
 <?php
-      session_start();
 
-      if(!isset($_SESSION['carrinho'])){
-         $_SESSION['carrinho'] = array();
-      }
+session_start();
 
+if(!isset($_SESSION['carrinho']))
+{
+    $_SESSION['carrinho'] = array(); // O carrinho é uma array, no qual guarda varias informações.
+        
+}
 
-      if(isset($_GET['acao'])){
-
-            if($_GET['acao'] == 'add'){
-            $id = intval($_GET['COD_PRODUTO']);
-            if(!isset($_SESSION['carrinho'][$id])){
-               $_SESSION['carrinho'][$id] = 1;
-            }else{
-               $_SESSION['carrinho'][$id] += 1;
-            }
-         }
-
-
-         if($_GET['acao'] == 'del'){
-            $id = intval($_GET['COD_PRODUTO']);
-            if(isset($_SESSION['carrinho'][$id])){
-               unset($_SESSION['carrinho'][$id]);
-            }
-         }
-
-
-         if($_GET['acao'] == 'up'){
-            if(is_array($_POST['prod'])){
-               foreach($_POST['prod'] as $id => $qtd){
-                  $id  = intval($id);
-                  $qtd = intval($qtd);
-                  if(!empty($qtd) || $qtd <> 0){
-                     $_SESSION['carrinho'][$id] = $qtd;
-                  }else{
-                     unset($_SESSION['carrinho'][$id]);
-                  }
-               }
-            }
-         }
-
-      }
-
-
+if(isset($_GET['acao']))
+{
+    if($_GET['acao'] == 'add')
+    $cod = intval($_GET['COD_PRODUTO']);
+    
+    if(!isset($_SESSION['carrinho'][$cod]))
+      {
+      $_SESSION['carrinho'][$cod] = 1; //Aqui estou adicionando a quantidade do referido produto. 
+      }  
+    else
+    {
+        $_SESSION['carrinho'][$cod]+=1; // Aumentando a quantidade de produtos.
+    }
+}
+// Fim da Rotina para adicionar o produto ao carrinho.
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Carrinho de Compras</title>
+    <title>Carrinho de Compras</title>
+<meta lang="pt-br">
+<meta charset="UTF-8">
 </head>
-
-<body>
-<table>
-    <caption>Carrinho de Compras</caption>
-    <thead>
+ <body>
+     <table>
+     <caption>Carrinho</caption>
+     <thead>
+        <tr>
+            <th width="250">Produto</th>
+            <th width="100">Quantidade</th>
+            <th width="100">Preço</th>
+            <th width="100">Subtotal</th>
+            <th width="100">Remover</th>
+        </tr>
+     </thead>
+     <form>
+     <tfoot>
+         <tr>
+             <td><input type="submit" value="Atualizar Carrinho"/></td>
+         </tr>
           <tr>
-            <th width="244">Produto</th>
-            <th width="79">Quantidade</th>
-            <th width="89">Pre&ccedil;o</th>
-            <th width="100">SubTotal</th>
-            <th width="64">Remover</th>
-          </tr>
-    </thead>
-            <form action="?acao=up" method="post">
-    <tfoot>
-           <tr>
-            <td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
-            <tr>
-            <td colspan="5"><a href="listarCarrinho.php">Continuar Comprando</a></td>
-    </tfoot>
-
-    <tbody>
-               <?php
-                     if(count($_SESSION['carrinho']) == 0){
-                        echo '<tr><td colspan="5">N&atilde;o h&aacute; produtos no carrinho</td></tr>';
-                     }else{
-
-                        require("conexao/conecta.php");
-
-                        $total = 0;
-                        foreach($_SESSION['carrinho'] as $id => $qtd){
-                              $sql   = "SELECT *  FROM produtos WHERE COD_PRODUTO = '$id'";
-                              $qr    = mysql_query($sql) or die(mysql_error());
-                              $ln    = mysql_fetch_assoc($qr);
-
-                              $nome  = $ln['NOME_PRODUTO'];
-                              $preco = number_format($ln['PRECO_PRODUTO'], 2, ',', '.');
-                              $sub   = number_format($ln['PRECO_PRODUTO'] * $qtd, 2, ',', '.');
-
-                              $total += $ln['PRECO_PRODUTO'] * $qtd;
-
-                           echo '<tr>
-                                 <td>'.$nome.'</td>
-                                 <td><input type="text" size="3" name="prod['.$id.']" value="'.$qtd.'" /></td>
-                                 <td>R$ '.$preco.'</td>
-                                 <td>R$ '.$sub.'</td>
-                                 <td><a href="?acao=del&COD_PRODUTO='.$id.'">Remove</a></td>
-                              </tr>';
-                        }
-                           $total = number_format($total, 2, ',', '.');
-                           echo '<tr>
-                                    <th colspan="4">Total</th>
-                                    <th>R$'.$total.'</th>
-                              </tr>';
-                     }
-               ?>
-
+             <td><a href="listarCarrinho.php">Compre mais</a></td>
+         </tr>
+     </tfoot>
+     
+     <tbody>
+         <?php
+     mostrarCarrinho();
+         ?>
      </tbody>
-        </form>
-</table>
-
-</body>
-</html>
+     </table>
+ </body>
+ </html>
+ <?php
+ function mostrarCarrinho()
+ {
+     if(count($_SESSION['carrinho']==0)) // A Fu~ção count() é responsavel em contar os elementos de uma array.
+     {
+         echo "<tr><td>Não há produtos no carrinho!</td></tr>";
+     }
+     else{
+         require 'conexao/conecta.php'; // O Require exige que seja incluido um determinado arquivo
+                                        // Caso nao for possivel incluir o arquivo ocorrerá um erro fatal.
+                                        // e a execução do script é abortada
+         
+         $totalProdutos = 0;
+         foreach ($_SESSION['carrinho'] as $cod=> $quantidade) // O foreach é um laço de repetição exclusivo para utilização de matrizes.
+         {
+          $sql = "SELECT FROM produtos WHERE COD_PRODUTO ='$cod'";
+          $query = mysql_query($sql);
+          $result = mysql_fetch_array($query);
+          
+          $nomeProduto = $result["NOME_PRODUTO"];
+          $precoProduto = $result["PRECOVENDA_PRODUTO"];
+          $subTotal     = $result["PRECOVENDA_PRODUTO"] * $quantidade;
+          
+          echo '<tr>
+       <td>'.$nomeProduto.'</td>;
+       <td> <input type=text name=""> </td>;
+       <td>'.$precoProduto.'</td>;
+       <td>'.$subTotal.'</td>;
+</tr>';
+         }
+     }
+ }
+ ?>
