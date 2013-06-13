@@ -12,7 +12,7 @@
     <section id="cabecalho">
 	 <header> 
 	
-             <a href="index.php"> <img src="imagens/logo_comiccents.png" /> </a>
+             <a href="index.php"> <img src="imagens/logo_comiccents.png" id="logo"/> </a>
              
                 <label for="" title="" id="busca">
                 Buscar:
@@ -37,11 +37,11 @@
 	
     
     <section id="menu_esquerdo">
-	 <nav>
+	 <nav id="lateral">
 	 
 	 <br />
 	 
-                <form action="login.php" name="login" method="post">
+                <form action="login.php" name="login" method="post" id="formulario">
                 
                     Usu&aacute;rio: <input type="text" name="usuario" autofocus="autofocus" required="required" size="15"/>
                     <br /><br />
@@ -89,7 +89,7 @@
   	</section>	
 	
 	
-    <section id="Conteudo">
+    <section id="conteudo">
 	  <article>
 	  
      	<iframe src="listarCarrinho.php" name="quadro" frameborder="" id="frame">
@@ -105,7 +105,7 @@
 	
 	
 	
-	<section id="Rodape">
+	<nav id="rodape">
 	  <footer>
 	    <center>
 		<a href="">Projeto</a>      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -120,7 +120,7 @@
 	    <center>Rua Calopsita, 11 - Engenho Novo - Barueri - CEP:06460-112 - Hip&eacute;rion todos os direitos reservados - 2013</center>
 		
 	  </footer>
-	</section>
+	</nav>
 	
 	
 	
