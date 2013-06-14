@@ -17,7 +17,7 @@
                 <label for="" title="" id="busca">
                 Buscar:
                 <input type="text" name="" id="" size="" maxlength="" placeholder="Busque aqui">
-                <img src="imagens/botao.png">
+                <img src="imagens/botoes_setas/botao.png">
                 </label>  
                 <br />
 	 
