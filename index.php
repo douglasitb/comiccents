@@ -48,7 +48,7 @@
                     Senha: &nbsp <input type="password" name="senha" size="15" />
                     <br /><br />
                     <input type="submit" value="Entrar" /> &nbsp &nbsp 
-                    <a href="cadastro.html" target="quadro" id="cadastro"> Cadastre-se </a>
+                    <a href="cadastro.php" target="quadro" id="cadastro"> Cadastre-se </a>
 				   
                 </form>
 			
