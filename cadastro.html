@@ -29,36 +29,36 @@ window.onload = function(){
 
 </script>
 
-<p> <h3>Cadastro</h3> </p>
+<h3>Cadastro</h3>
 <br /><br />
 
-<form action="" method="" id="formulario">
+<form action="../incluirCadastro.php" method="get" id="formulario">
 
-<label for="" title="Informe o nome"> 
+<label title="Informe o nome" name="nome_usuario"> 
 Nome........ </label>
-<input type="text" name="" id="" size="" maxlength="50" />
+<input type="text"maxlength="50" />
 <br /><br /><br />
 
-<label for="" title="Informe o e-mail">
+<label title="Informe o e-mail" name="email_usuario">
 E-mail........</label>
-<input type="text" name="" id="" size="" maxlength="">
+<input type="text" />
 <br /><br /><br />
 
-Telefone..... <input type="text" name="telefone" id="telefone" maxlength="14" placeholder="(XX) XXXX-XXXX" />
+Telefone..... <input type="text" name="telefone_usuario" id="telefone" maxlength="14" placeholder="(XX) XXXX-XXXX" />
  <br /><br /><br />
 
-<label for="" title="Informe o sexo"> Sexo..........</label>
+<label title="Informe o sexo" name="sexo_usuario"> Sexo..........</label>
 
-<input type="radio" name="sexo" id="masculino" value="" checked="checked" /> Masculino
-<input type="radio" name="sexo" id="feminino"  value="" /> Feminino
+<input type="radio" name="sexo_usuario" id="masculino" value="" checked="checked" /> Masculino
+<input type="radio" name="sexo_usuario" id="feminino"  value="" /> Feminino
 <br /><br /><br />
 
-<label for="" title="Informe o CPF"> 
+<label title="Informe o CPF" name="cpf_usuario"> 
 CPF...........</label>
-<input type="text" name="" id="cpf" size="" maxlength=""/>
+<input type="text" id="cpf"/>
 <br /><br /><br />
 
-<label for="" title="Selecione um estado"> Estado........</label>
+<label title="Selecione um estado"> Estado........</label>
 
 <select id="lista1" size="1" >
 <option value="SP" selected="selected"> SP </option>
@@ -92,45 +92,40 @@ CPF...........</label>
 </select>
 <br /><br /><br />
 
-<label for="" title="Informe o bairro">
+<label title="Informe o bairro">
 Munic&iacute;pio.... </label>
-<input type="text" name="" id="" size="" maxlength="">
+<input type="text" />
 <br /><br /><br />
 
-<label for="" title="Informe o bairro">
+<label title="Informe o bairro">
 Bairro......... </label>
-<input type="text" name="" id="" size="" maxlength="">
+<input type="text" />
 <br /><br /><br />
 
-<label for="" title="Informe o CEP">
+<label title="Informe o CEP" name="cep_usuario">
 CEP............ </label>
-<input type="text" name="" id="" size="" maxlength="">
+<input type="text" />
 <br /><br /><br />
 
-<label for="" title="Informe o bairro">
+<label title="Informe o bairro">
 Rua............ </label>
-<input type="text" name="" id="" size="" maxlength="">
-<label for="" title="Informe o bairro">
+<input type="text" />
+<label title="Informe o bairro">
 <br /><br /><br />
 
 N&uacute;mero..... </label>
-<input type="text" name="" id="" size="5" maxlength="">
+<input type="text"size="5" />
 
 
 &nbsp &nbsp &nbsp
-
+<label title="Informe o complemento">
 Complemento.... </label>
-<input type="text" name="" id="" size="5" maxlength="">
+<input type="text" size="5" />
 <br /><br /><br />
 
-<label for="" title="Informe a senha">
+<label  title="Informe a senha" name="senha_usuario">
 Senha.......... </label>
-<input type="password" name="" id="" size="" maxlength="">
-&nbsp &nbsp &nbsp 
-
-<label for="" title="Informe a senha novamente">
-Confirmar Senha..... </label>
-<input type="password" name="" id="" size="" maxlength="">
+<input type="password" /> 
 <br /><br /><br />
 
 &nbsp &nbsp &nbsp &nbsp
