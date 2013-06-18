@@ -1,4 +1,4 @@
-<html>
+ <html>
 <head>
 <title> Comic Cents </title>
 
@@ -14,9 +14,9 @@
 	
              <a href="index.php"> <img src="imagens/logo_comiccents.png" id="logo"/> </a>
              
-                <label for="" title="" id="busca">
+                <label id="busca">
                 Buscar:
-                <input type="text" name="" id="" size="" maxlength="" placeholder="Busque aqui">
+                <input type="text" placeholder="Busque aqui">
                 <img src="imagens/botoes_setas/botao.png">
                 </label>  
                 <br />

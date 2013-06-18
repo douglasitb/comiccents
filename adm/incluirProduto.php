@@ -27,10 +27,11 @@ echo $estado_fisico ."<br/>";
 echo $editora_produto."<br/>";
 echo $imagem_url ."<br/>";*/
 
-$cod_fornecedor = 1;
+
+
 /*$sql ="INSERT INTO produtos(NOME_PRODUTO, DESCRICAO_PRODUTO,PRECO_PRODUTO,PRECOVENDA_PRODUTO,QUANTIDADEESTOQUE_PRODUTO, IMAGEMURL_PRODUTO, TAMANHO_PRODUTO, ESTADO_FISICO, EDITORA_PRODUTO, NUMERO_PAGS)
                    VALUES('$nome_produto','$descricao_produto','$preco_produto','$precoVenda_produto','$qtde_estoque','$imagem_url,'$tamanho_produto','$estado_fisico','$editora_produto','$numero_pags')";*/
-
+$cod_fornecedor = 1;
 $sql ="INSERT INTO produtos(NOME_PRODUTO,DESCRICAO_PRODUTO,PRECO_PRODUTO,PRECOVENDA_PRODUTO,QUANTIDADEESTOQUE_PRODUTO,IMAGEMURL_PRODUTO,TAMANHO_PRODUTO,FORNECEDORES_COD_FORNECEDOR,ESTADO_FISICO,EDITORA_PRODUTO,NUMERO_PAGS)
                    VALUES('$nome_produto','$descricao_produto','$preco_produto','$precoVenda_produto','$qtde_estoque','$imagem_url','$tamanho_produto','$cod_fornecedor','$estado_fisico','$editora_produto','$numero_pags')";
 if(mysql_query($sql))

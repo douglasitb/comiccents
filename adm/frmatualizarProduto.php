@@ -40,7 +40,6 @@ echo
         <input type=text name=estado_fisico/></br></br>
         <input type=text name=editora_produto/></br></br>
         <input type=text name=imagem_url/></br></br>      
-                      
 ";
            
             
