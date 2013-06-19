@@ -119,7 +119,7 @@ CREATE TABLE `produtos` (
   PRIMARY KEY (`COD_PRODUTO`),
   KEY `fk_PRODUTOS_FORNECEDORES_idx` (`FORNECEDORES_COD_FORNECEDOR`),
   CONSTRAINT `fk_PRODUTOS_FORNECEDORES` FOREIGN KEY (`FORNECEDORES_COD_FORNECEDOR`) REFERENCES `fornecedores` (`COD_FORNECEDOR`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `produtos`
@@ -132,7 +132,8 @@ INSERT INTO `produtos` (`COD_PRODUTO`,`NOME_PRODUTO`,`DESCRICAO_PRODUTO`,`PRECO_
  (3,'Hoemem','dsbfhgfgf',10,10,'10','unnamed1.jpg','102x102',1,'novo','Marveu',120),
  (4,'suimome','gsrfsf',101,10,'10','unnamed3.jpg','102x102',1,'novo','Marveu',120),
  (5,'Homi de Ferradura','È bom podi compa',12,12,'14','unnamed.jpg','123x123',1,'Novinha','Marvéu',12),
- (6,'hfggghdhd','fhhfhfh',12,12,'14','unnamed2.jpg','123x123',1,'Novinha','Marvéu',12);
+ (6,'hfggghdhd','fhhfhfh',12,12,'14','unnamed2.jpg','123x123',1,'Novinha','Marvéu',12),
+ (15,'Dead Space','Terror',20,25,'20','','30 x 25',1,'Novo','Eletronic Arts',225);
 /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 
 
