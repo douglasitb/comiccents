@@ -8,14 +8,14 @@ session_start();
 $_SESSION["senha"] = $_POST["senha"];
 */
 
-$nomeUsuario = $_POST["usuario"];
+$email_usuario = $_POST["usuario"];
 $senhaUsuario = $_POST["senha"];
 
 //echo $nomeUsuario;
 //echo $senhaUsuario;
-$sql = "SELECT NOME_USUARIO,SENHA_USUARIO,TIPO_USUARIO
+$sql = "SELECT EMAIL_USUARIO,SENHA_USUARIO,TIPO_USUARIO
               FROM usuario
-                          WHERE NOME_USUARIO = '$nomeUsuario'";
+                          WHERE EMAIL_USUARIO = '$email_usuario'";
                         
 $resultado = mysql_query($sql);
 $linhas = mysql_num_rows($resultado);
@@ -34,7 +34,7 @@ else{
                 echo"<a href=frmlogin.html>Voltar</a>;";
             }
             else{
-                $_SESSION["usuario"] = $nomeUsuario;
+                $_SESSION["usuario"] = $email_usuario;
                 $_SESSION["senha"] = $senhaUsuario;
                 header("Location:indexrestrito.php");
             }

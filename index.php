@@ -43,7 +43,7 @@
 	 
                 <form action="login.php" name="login" method="post" id="formulario">
                 
-                    Usu&aacute;rio: <input type="text" name="usuario" autofocus="autofocus" required="required" size="15"/>
+                    Email: &nbsp&nbsp&nbsp <input type="text" name="usuario" autofocus="autofocus" required="required" size="15"/>
                     <br /><br />
                     Senha: &nbsp <input type="password" name="senha" size="15" />
                     <br /><br />
@@ -61,12 +61,12 @@
                    <li> <a href="listarCarrinho.php" target="quadro"> Homem-aranha   </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Batman 		   </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Super-man      </a> </li>
-        	   <li> <a href="listarCarrinho.php" target="quadro"> Liga da Justi&ccedil;a </a> </li>
-        	   <li> <a href="listarCarrinho.php" target="quadro"> Vingadores </a> </li>
+        	       <li> <a href="listarCarrinho.php" target="quadro"> Liga da Justi&ccedil;a </a> </li>
+        	       <li> <a href="listarCarrinho.php" target="quadro"> Vingadores </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Homem de Ferro </a> </li> 
                    <li> <a href="listarCarrinho.php" target="quadro"> Capit&atilde;o Am&eacute;rica </a> </li>
-        	   <li> <a href="listarCarrinho.php" target="quadro"> Wolverine </a> </li>
-        	   <li> <a href="listarCarrinho.php" target="quadro"> X-men </a> </li>
+        	       <li> <a href="listarCarrinho.php" target="quadro"> Wolverine </a> </li>
+        	       <li> <a href="listarCarrinho.php" target="quadro"> X-men </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Hulk </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Flash </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Lanterna Verde </a> </li>
@@ -116,7 +116,7 @@
 		
 		<br />
 		
-	    <center>TCC - Projeto acad&ecirc;mico - INI3CM - 2013</center>
+	    <center>TCC - Projeto acad&ecirc;mico - INI3CM - 2013<br/>
 	    <center>Rua Calopsita, 11 - Engenho Novo - Barueri - CEP:06460-112 - Hip&eacute;rion todos os direitos reservados - 2013</center>
 		
 	  </footer>
