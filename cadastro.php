@@ -4,6 +4,21 @@
 <html>
 <body>
 
+    <style type="text/css">
+        .formulario{
+            margin-left: 50px;
+        }
+        
+        .linha1{
+            background-color: #F9EFE5;
+        }
+        
+        .linha2{
+            background-color: #F7E1C9;
+        }
+    </style>
+    
+    
 <script type="text/javascript">
 /* MÃƒÂ¡scaras ER */
 function mascara(o,f){
@@ -15,9 +30,9 @@ function execmascara(){
     v_obj.value=v_fun(v_obj.value)
 }
 function mtel(v){
-    v=v.replace(/\D/g,"");                  //Remove tudo o que nÃƒÂ£o ÃƒÂ© dÃƒÂ­gito
-    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parÃƒÂªnteses em volta dos dois primeiros dÃƒÂ­gitos
-    v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hÃƒÂ­fen entre o quarto e o quinto dÃƒÂ­gitos
+    v=v.replace(/\D/g,"");                  //Remove tudo o que nao for digito
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parenteses em volta dos dois primeiros digitos
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hifen entre o quarto e o quinto digitos
     return v;
 }
 function id( el ){
@@ -33,57 +48,118 @@ window.onload = function(){
 
 <h3>Cadastro</h3>
 <br /><br />
+<form action="incluirCadastro.php" method="post" class="formulario">
+    
+<table width="400" height="50" border="0" cellspacing="0" class="tabela">
 
-<form action="incluirCadastro.php" method="post">
+        <tr class="linha1">
+            <td> Nome Completo: </td>
+            <td> <input type="text" maxlength="50" name="nome_usuario" title="Informe o nome"/> </td>
+	</tr>	
+	
+        <tr class="linha2">
+            <td> Sexo: </td>
+            <td> <input type="radio" name="sexo_usuario" id="masculino" checked="checked" /> Masculino
+                 <input type="radio" name="sexo_usuario" id="feminino" /> Feminino </td>
+        </tr>
+        
+        <tr class="linha1">
+            <td> Data de Nascimento: </td>
+            <td> <input type="text" name="data_nasc_usuario"/> </td>
+        </tr>
+        
+        <tr class="linha2">
+            <td> Telefone: </td>
+            <td> <input type="text" name="telefone_usuario" id="telefone" maxlength="14" placeholder="(XX) XXXX-XXXX" title="Informe o telefone"/> </td>
+        </tr>
+        
+        <tr class="linha1">
+            <td> Email: </td>
+            <td> <input type="text" name="email_usuario" title="Informe o e-mail"/> </td>
+        </tr>
+        
+        <tr class="linha2">
+            <td> Senha: </td> 
+            <td> <input type="password" name="senha_usuario" title="Informe a senha"/> </td>
+        </tr>
+        
+        <tr class="linha1">
+            <td>UF:</td>
+            <td><select name="uf_usuario">
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>MS</option>
+                        <option>MG</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PR</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RS</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>SC</option>
+                        <option>SP</option>
+                        <option>SE</option>
+                        <option>TO</option></select><td></tr>
+    
+        <tr class="linha2">
+            <td> Cidade: </td>
+            <td> <input type="text" name="cidade_usuario"/> </td>
+        </tr>
+        
+        <tr class="linha1">
+            <td> Bairro: </td>
+            <td> <input type="text" name="bairro_usuario" title="Informe o bairro"/> </td>
+        </tr>
+        
+        <tr class="linha2">
+            <td> Rua: </td>
+            <td> <input type="text" name="logradouro_usuario" title="Informe o Logradouro"/> </td>
+        </tr>
+        
+        <tr class="linha1">
+            <td> Número: </td>
+            <td> <input type="text" name="numero_usuario" size="5"/> </td>
+        </tr>
             
-        Nome Completo: <input type="text" maxlength="50" name="nome_usuario" title="Informe o nome"/></br></br>
-        Email: <input type="text" name="email_usuario" title="Informe o e-mail"/></br></br>
-        Senha: <input type="password" name="senha_usuario" title="Informe a senha"/></br></br>
-        Logradouro: <input type="text" name="logradouro_usuario" title="Informe o Logradouro"/></br></br>
-        Bairro: <input type="text" name="bairro_usuario" title="Informe o bairro"/></br></br>
-        Cidade: <input type="text" name="cidade_usuario"/></br></br>
-        UF: <select id="lista1" size="1" name="estado_usuario" >
-<option value="RJ"> AC </option>
-<option value="BA"> AL </option>
-<option value="PR"> AP </option>
-<option value="MG"> AM </option>
-<option value="SE"> BA </option>
-<option value="DF"> CE </option>
-<option value="AM"> DF </option>
-<option value="AC"> ES </option>
-<option value="AC"> GO </option>
-<option value="AC"> MA </option>
-<option value="AC"> MT </option>
-<option value="AC"> MS </option>
-<option value="AC"> MG </option>
-<option value="AC"> PA </option>
-<option value="AC"> PB </option>
-<option value="AC"> PR </option>
-<option value="AC"> PE </option>
-<option value="AC"> PI </option>
-<option value="AC"> RJ </option>
-<option value="AC"> RN </option>
-<option value="AC"> RS </option>
-<option value="AC"> RO </option>
-<option value="AC"> RR </option>
-<option value="AC"> SC </option>
-<option value="AC"> SP </option>
-<option value="AC"> SE </option>
-<option value="AC"> TO </option>
-</select>        </br></br>
-
-        CEP: <input type="text" name="cep_usuario"/></br></br>
-        Número: <input type="text" name="numero_usuario" size="15"/></br></br>
-        Complemento: <input type="text" name="complemento_usuario" size="5"/></br></br>
-        RG: <input type="text" name="rg_usuario"/></br></br>
-        CPF: <input type="text" name="cpf_usuario"/></br></br>
-        Sexo: <input type="radio" name="sexo_usuario" id="masculino" value="" checked="checked" /> Masculino
-               <input type="radio" name="sexo_usuario" id="feminino"  value="" /> Feminino</br></br>
-        Data de Nascimento: <input type="text" name="data_nasc_usuario"/></br></br>
-        Telefone: <input type="text" name="telefone_usuario" id="telefone" maxlength="14" placeholder="(XX) XXXX-XXXX" title="Informe o telefone"/></br></br>
+        <tr class="linha2">
+            <td> Complemento: </td>
+            <td> <input type="text" name="complemento_usuario" size="5"/> </td>
+        </tr>
+            
+        <tr class="linha1">
+            <td> CEP: </td>
+            <td> <input type="text" name="cep_usuario"/> </td>
+        </tr>
         
+        <tr class="linha2">
+            <td> RG: </td>
+            <td> <input type="text" name="rg_usuario"/> </td>
+        </tr>
         
+        <tr class="linha1">
+            <td> CPF: </td>
+            <td> <input type="text" name="cpf_usuario"/> </td>
+        </tr>
         
+        <tr><td> <br /> <br /> </td></tr>
         
-        <input type="submit" text="Cadastrar"/>
-        </form>
+        <tr>
+        <td> <input type="submit" value="Cadastrar" /> &nbsp &nbsp
+        <input type="reset"  value="Limpar" /> </td>
+        <tr>
+        
+</table> 
+</form>
