@@ -1,7 +1,6 @@
  <html>
 <head>
 <title> Comic Cents </title>
-
 <link rel="stylesheet" type="text/css" href="estilos.css" />
 
 </head>
@@ -16,7 +15,7 @@
              
                 <label id="busca">
                 Buscar:
-                <input type="text" placeholder="Busque aqui">
+                <input type="text" placeholder="Busque aqui"> &nbsp &nbsp
                 <img src="imagens/botoes_setas/botao.png">
                 </label>  
                 <br />
@@ -98,11 +97,8 @@
 	  </article>
 	</section>
 	
-	
-	
-	
-	
-	<nav id="rodape">
+      
+	<section id="rodape">
 	  <footer>
 	    <center>
 		<a href="">Projeto</a>      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -117,7 +113,7 @@
 	    <center>Rua Calopsita, 11 - Engenho Novo - Barueri - CEP:06460-112 - Hip&eacute;rion todos os direitos reservados - 2013</center>
 		
 	  </footer>
-	</nav>
+	</section>
 	
 	
 	
