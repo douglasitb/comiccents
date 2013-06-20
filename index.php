@@ -61,12 +61,12 @@
                    <li> <a href="listarCarrinho.php" target="quadro"> Homem-aranha   </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Batman 		   </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Super-man      </a> </li>
-        	       <li> <a href="listarCarrinho.php" target="quadro"> Liga da Justi&ccedil;a </a> </li>
-        	       <li> <a href="listarCarrinho.php" target="quadro"> Vingadores </a> </li>
+        	   <li> <a href="listarCarrinho.php" target="quadro"> Liga da Justi&ccedil;a </a> </li>
+        	   <li> <a href="listarCarrinho.php" target="quadro"> Vingadores </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Homem de Ferro </a> </li> 
                    <li> <a href="listarCarrinho.php" target="quadro"> Capit&atilde;o Am&eacute;rica </a> </li>
-        	       <li> <a href="listarCarrinho.php" target="quadro"> Wolverine </a> </li>
-        	       <li> <a href="listarCarrinho.php" target="quadro"> X-men </a> </li>
+        	   <li> <a href="listarCarrinho.php" target="quadro"> Wolverine </a> </li>
+        	   <li> <a href="listarCarrinho.php" target="quadro"> X-men </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Hulk </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Flash </a> </li>
                    <li> <a href="listarCarrinho.php" target="quadro"> Lanterna Verde </a> </li>
@@ -97,9 +97,6 @@
 		</iframe>	
 	  </article>
 	</section>
-	
-	
-	
 	
 	
 	
