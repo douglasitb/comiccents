@@ -1,5 +1,5 @@
 <?php
-$codigoProduto = $_REQUEST["codigo"];
+$codigoProduto = $_REQUEST["codproduto"];
 
 include_once '../conexao/conecta.php';
 include_once '../funcoes/funcoesUteis.inc';
@@ -17,10 +17,10 @@ echo
     
     <body>       
                
-        <form>";
+        <form src=atualizarProduto.php>";
         $sql = "SELECT * FROM produtos WHERE COD_PRODUTO  = '$codigoProduto'";
         $result = mysql_query($sql);
-        while ($produtos = mysql-fetch_array($result))
+        while ($produtos = mysql_fetch_array($result))
         {
             echo"
         <input type=text name=codproduto value='".$produtos["COD_PRODUTO"]   ."'></br>       
@@ -39,7 +39,8 @@ echo
         <input type=text name=numero_pags/></br></br>
         <input type=text name=estado_fisico/></br></br>
         <input type=text name=editora_produto/></br></br>
-        <input type=text name=imagem_url/></br></br>      
+        <input type=text name=imagem_url/></br></br> 
+        <input type=submit name=Atualizar/>
 ";
            
             

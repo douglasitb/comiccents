@@ -4,8 +4,8 @@ include_once '../funcoes/funcoesUteis.inc';
 validaAutenticacao("../logout.php", "../conexao/conecta.php", "ADM");
 
 // echo $_POST["nomeproduto"];
-$nomeProduto        = $_POST["nomeproduto"];
 $codigoProduto      = $_POST["codproduto"];
+/*$nomeProduto        = $_POST["nomeproduto"];
 $descricao_produto  = $_POST["descricao"];
 $qtde_estoque       = $_POST["quantidade"];
 $preco_produto      = $_POST["preco"];
@@ -14,14 +14,14 @@ $tamanho_produto    = $_POST["tamanho"];
 $imagem_url         = $_POST["imagemurl"];
 $estado_fisico      = $_POST["estadofisico"];
 $editora_produto    = $_POST["editoraproduto"];
-$numero_pags        = $_POST["numeropags"];
+$numero_pags        = $_POST["numeropags"];*/
 
-$sql = "UPDATE produtos SET ";
-$sql.= "NOME_PRODUTO = '$nomeProduto', DESCRICAO_PRODUTO='$descricao_produto',";
+$sql = "UPDATE * FROM produtos SET ";
+/*$sql.= "NOME_PRODUTO = '$nomeProduto', DESCRICAO_PRODUTO='$descricao_produto',";
 $sql.= "NUMERO_PAGS = '$numero_pags',, QUANTIDADEESTOQUE_PRODUTO='$qtde_estoque',";
 $sql.= "PRECO_PRODUTO = '$preco_produto', PRECOVENDA_PRODUTO='$precoVenda_produto',";
 $sql.= "TAMANHO_PRODUTO = '$tamanho_produto', IMAGEMURL_PRODUTO='$imagem_url',";
-$sql.= "ESTADO_FISICO = '$estado_fisico', EDITORA_PRODUTO='$editora_produto',";
+$sql.= "ESTADO_FISICO = '$estado_fisico', EDITORA_PRODUTO='$editora_produto',";*/
 $sql.= "WHERE COD_PRODUTO='$codigoProduto'";
 
 if(mysql_query($sql))

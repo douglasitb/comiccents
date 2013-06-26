@@ -18,6 +18,7 @@ echo 'Pre&ccedil;o: R$'.$ln['PRECOVENDA_PRODUTO'].'<br />';
 echo '<a href="carrinho.php?acao=add&COD_PRODUTO='.$ln['COD_PRODUTO'].'">Comprar</a></div>';
 
 
+
 }
 
 ?>

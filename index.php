@@ -1,6 +1,6 @@
- <html>
+<html>
 <head>
-<title> Comic Cents </title>
+<title>Comic Cents</title>
 <link rel="stylesheet" type="text/css" href="estilos.css" />
 
 </head>
@@ -11,11 +11,11 @@
     <section id="cabecalho">
 	 <header> 
 	
-             <a href="index.php"> <img src="imagens/logo_comiccents.png" id="logo"/> </a>
+             <a href="index.php"> <img src="imagens/topo/logo_comiccents.png" id="logo"/> </a>
              
                 <label id="busca">
                 Buscar:
-                <input type="text" placeholder="Busque aqui"> &nbsp &nbsp
+                <input type="text" placeholder="Busque aqui">
                 <img src="imagens/botoes_setas/botao.png">
                 </label>  
                 <br />
@@ -93,10 +93,11 @@
 	  
      	<iframe src="listarCarrinho.php" name="quadro" frameborder="" id="frame">
 		
-		</iframe>	
+		</iframe>
+                
 	  </article>
 	</section>
-	
+
       
 	<section id="rodape">
 	  <footer>
@@ -110,7 +111,7 @@
 		<br />
 		
 	    <center>TCC - Projeto acad&ecirc;mico - INI3CM - 2013<br/>
-	    <center>Rua Calopsita, 11 - Engenho Novo - Barueri - CEP:06460-112 - Hip&eacute;rion todos os direitos reservados - 2013</center>
+	    <center>Rua Calopsita, 11 - Engenho Novo - Barueri - CEP:06460-112 - 2013</center>
 		
 	  </footer>
 	</section>
