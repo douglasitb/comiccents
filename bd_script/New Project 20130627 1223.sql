@@ -126,14 +126,6 @@ CREATE TABLE `produtos` (
 --
 
 /*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
-INSERT INTO `produtos` (`COD_PRODUTO`,`NOME_PRODUTO`,`DESCRICAO_PRODUTO`,`PRECO_PRODUTO`,`PRECOVENDA_PRODUTO`,`QUANTIDADEESTOQUE_PRODUTO`,`IMAGEMURL_PRODUTO`,`TAMANHO_PRODUTO`,`FORNECEDORES_COD_FORNECEDOR`,`ESTADO_FISICO`,`EDITORA_PRODUTO`,`NUMERO_PAGS`) VALUES 
- (1,'Homem Aranha','E bom',145,149,'12','xxxxxx','225x225',1,'Novo','Marvel Comics',12),
- (2,'Homem Aranha','E bom',145,149,'12','xxxxxx','225x225',1,'Novo','Marvel Comics',12),
- (3,'Hoemem','dsbfhgfgf',10,10,'10','unnamed1.jpg','102x102',1,'novo','Marveu',120),
- (4,'suimome','gsrfsf',101,10,'10','unnamed3.jpg','102x102',1,'novo','Marveu',120),
- (5,'Homi de Ferradura','È bom podi compa',12,12,'14','unnamed.jpg','123x123',1,'Novinha','Marvéu',12),
- (6,'hfggghdhd','fhhfhfh',12,12,'14','unnamed2.jpg','123x123',1,'Novinha','Marvéu',12),
- (15,'Dead Space','Terror',20,25,'20','','30 x 25',1,'Novo','Eletronic Arts',225);
 /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 
 
@@ -161,7 +153,7 @@ CREATE TABLE `usuario` (
   `NUMERO_USUARIO` int(10) unsigned NOT NULL,
   `COMPLEMENTO_USUARIO` int(10) unsigned NOT NULL,
   PRIMARY KEY (`COD_USUARIO`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `usuario`
@@ -176,7 +168,9 @@ INSERT INTO `usuario` (`COD_USUARIO`,`NOME_USUARIO`,`EMAIL_USUARIO`,`SENHA_USUAR
  (5,'Victor','rogerio2@gmail.com','12345678','Avenida Marginal','1234567897','42044476063','','0000-00-00','RES','1198073879','06447100','Paulista','Barueri','SP',41,0),
  (6,'Victor2','gmdosite@gmail.com','12345678','Master Yi','0580477798','1234565767','','0000-00-00','ADM','(11) 7186-23','1102140512','Ks','Summoners Rift','LOL',21,0),
  (10,'Victor4','victor10@gmail.com','12345678','Avenida Marginal','12345789','1234565769','','0000-00-00','RES','1198073879','06447100','Paulista','Barueri','RJ',41,0),
- (11,'Willian','willian@hotmail.com','123456','Rua Casablanca','498745430','456987123645','','0000-00-00','RES','(11) 9807-38','06516-001','Vale do Sol','Barueri','AC',32,2);
+ (11,'Willian','willian@hotmail.com','123456','Rua Casablanca','498745430','456987123645','','0000-00-00','RES','(11) 9807-38','06516-001','Vale do Sol','Barueri','AC',32,2),
+ (12,'_siimoone','simone.silva_96@hotmail.com','avidaeumadroga123*','Rua Adoniran Barbosa','380254931','','','0000-00-00','ADM','1146890365','06462000','Parque Imperial','Barueri','SP',1181,0),
+ (13,'leticia','leticia123_tonacio@hotmail.com','leticia1511','Rua Bélgica','','','','0000-00-00','ADM','1128051091','06416200','Engenho Novo','Barueri','SP',109,0);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 

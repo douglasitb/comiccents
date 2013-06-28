@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Comic Cents</title>
@@ -89,14 +90,10 @@
 	
 	
     <section id="conteudo">
-	  <article>
-	  
-     	<iframe src="listarCarrinho.php" name="quadro" frameborder="" id="frame">
-		
-		</iframe>
-                
-	  </article>
-	</section>
+       	  <article id="quadro">
+     	
+           </article>
+	  </section>
 
       
 	<section id="rodape">

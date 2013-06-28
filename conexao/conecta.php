@@ -1,5 +1,5 @@
 <?php
-$host = "lab1m08";
+$host = "localhost";
 $database = "comiccentsdb";
 $username = "root";
 $password = "12345678";

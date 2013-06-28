@@ -3,7 +3,7 @@ include_once '../conexao/conecta.php';
 include_once '../funcoes/funcoesUteis.inc';
 validaAutenticacao("../logout.php", "../conexao/conecta.php", "ADM");
 
-$codigoProduto = $_GET["COD_PRODUTO"];
+$codigoProduto = $_GET["codproduto"];
 /*
 
 $sql = "DROP produtos SET ";
@@ -15,15 +15,16 @@ $sql.= "ESTADO_FISICO = '$estado_fisico', EDITORA_PRODUTO='$editora_produto',";
 $sql.= "FORNECEDORES_COD_FORNECEDOR = '$fornecedor_produto', COD_PRODUTO = '$codigoProduto'";
 $sql.= "WHERE COD_PRODUTO='$codigoProduto'";*/
 
-$sql = "DELETE * FROM produtos WHERE COD_PRODUTO='$codigoProduto'"; 
-$result = mysql_query($sql);
+$sql = "DELETE FROM produtos WHERE COD_PRODUTO='$codigoProduto'"; 
 
-if(mysql($result))
+if(mysql_query($sql))
 {
     echo "Produto excluido com Sucesso!<br/>";
     echo "<a href=listarprodutos.php>Listar Produtos </a>";
 }
 else{
-    echo "Erro ao executar";
+    echo mysql_error();
 }
+mysql_close();
+
 ?>

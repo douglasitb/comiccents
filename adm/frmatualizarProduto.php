@@ -15,14 +15,15 @@ echo
     <title>Formulário Atualizar produto</title>
     </head>
     
-    <body>       
+    <body>  
                
-        <form src=atualizarProduto.php>";
+        ";
         $sql = "SELECT * FROM produtos WHERE COD_PRODUTO  = '$codigoProduto'";
         $result = mysql_query($sql);
         while ($produtos = mysql_fetch_array($result))
         {
             echo"
+        <form action=atualizarProduto.php?$codigoProduto>
         <input type=text name=codproduto value='".$produtos["COD_PRODUTO"]   ."'></br>       
         <input type=text name=nomeproduto value='".$produtos["NOME_PRODUTO"]   ."'></br>
         <input type=text name=descricao value='".$produtos["DESCRICAO_PRODUTO"]   ."'></br>
