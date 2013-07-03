@@ -23,10 +23,10 @@
 	 
             <nav>
 		<h1 id="menu_topo">
-		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Home  </a>  &nbsp &nbsp | &nbsp &nbsp
-		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Marvel  </a>  &nbsp &nbsp | &nbsp &nbsp 
-		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  DC  </a>  &nbsp &nbsp | &nbsp &nbsp 
-		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Image  </a>  &nbsp &nbsp | &nbsp &nbsp 
+		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Home    </a> &nbsp; &nbsp; | &nbsp; &nbsp;
+		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Marvel  </a> &nbsp; &nbsp; | &nbsp; &nbsp; 
+		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  DC      </a> &nbsp; &nbsp; | &nbsp; &nbsp; 
+		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Image   </a> &nbsp; &nbsp; | &nbsp; &nbsp; 
 		 <a class="link_titulo" href="listarCarrinho.php"   target="quadro">  Mang&aacute;s  </a>
 		</h1>
             </nav>
@@ -43,11 +43,11 @@
 	 
                 <form action="login.php" name="login" method="post" id="formulario">
                 
-                    Email: &nbsp&nbsp&nbsp <input type="text" name="usuario" autofocus="autofocus" required="required" size="15"/>
+                    Email: &nbsp; &nbsp; <input type="text" name="usuario" autofocus="autofocus" required="required" size="15"/>
                     <br /><br />
-                    Senha: &nbsp <input type="password" name="senha" size="15" />
+                    Senha: &nbsp; <input type="password" name="senha" size="15" />
                     <br /><br />
-                    <input type="submit" value="Entrar" /> &nbsp &nbsp 
+                    <input type="submit" value="Entrar" /> &nbsp; &nbsp;
                     <a href="cadastro.php" target="quadro" id="cadastro"> Cadastre-se </a>
 				   
                 </form>
@@ -90,18 +90,21 @@
 	
 	
     <section id="conteudo">
-       	  <article id="quadro">
-     	
-           </article>
+       	  
+	  
+     	<iframe src="listarCarrinho.php" name="quadro" frameborder="" id="frame">
+		
+		</iframe>	
+	  
 	  </section>
 
       
 	<section id="rodape">
 	  <footer>
 	    <center>
-		<a href="">Projeto</a>      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-		<a href="">Equipe</a>       &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-		<a href="">Mapa do Site</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		<a href="">Projeto</a>      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<a href="">Equipe</a>       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<a href="">Mapa do Site</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 		<a href="">Fale conosco</a>
 		</center>
 		
